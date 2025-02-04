@@ -1,0 +1,59 @@
+/* Footer General */
+.footer {
+    background-color: #B983FF;/* Color principal */
+    color: #fff; /* Texto en blanco */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sección Superior */
+  .footerTop {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .socialMedia img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .footerInfo p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .footerLinks a {
+    display: block;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  /* Sección Inferior */
+  .footerBottom {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .certificado {
+    margin-top: 10px;
+    width: 100px;
+  }
+  
+  

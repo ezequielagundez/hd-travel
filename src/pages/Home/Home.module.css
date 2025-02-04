@@ -1,0 +1,35 @@
+/* Estilos para la sección Hero */
+.hero {
+    background-image: url('https://media.admagazine.com/photos/648205c5d6ffbb9c781e2789/3:2/w_2532,h_1688,c_limit/Avio%CC%81n.jpg');  /* Reemplaza con tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Esto le da una altura atractiva */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    
+  }
+  /* Filtro de color sobre la imagen */
+  
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }

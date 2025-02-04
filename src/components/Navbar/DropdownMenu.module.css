@@ -1,0 +1,40 @@
+.menuContainer {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .menuTitle {
+    font-size: 16px;
+    color: #000;
+    padding: 10px;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 100%; /* Aparece debajo del menú */
+    left: 0;
+    background-color: #f8c096; /* Fondo similar a tu imagen */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border-radius: 4px;
+    z-index: 10;
+  }
+  
+  .dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown li {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .dropdown li:hover {
+    background-color: #ddd;
+  }
+  

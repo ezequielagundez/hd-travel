@@ -1,0 +1,37 @@
+/* SocialLinks.css */
+.social-links {
+    position: fixed;
+    top: 50%; /* Centra verticalmente */
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 10px;
+    height: 10px;
+  }
+  
+
+  .social-whatsapp{
+    position: fixed;
+    bottom: 20px; /* Distancia desde el borde inferior */
+    right: 40px; /* Distancia desde el borde derecho */
+    padding: 20px; /* Espaciado interno */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    width: 300px; /* Ancho del modal */
+  }
+  .social-links a {
+    display: block;
+    margin: 10px 0;
+    font-size: 24px;
+    width: 21px;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #B983FF; /* Cambia a un color cuando el usuario pase el ratón */
+  }
+  
+  .social-links a:not(:last-child) {
+    margin-bottom: 15px; /* Espaciado entre íconos */
+  }
