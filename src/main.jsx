@@ -7,7 +7,7 @@ import "./index.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/hd-travel/"> {/* Agregado el basename */}
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>
