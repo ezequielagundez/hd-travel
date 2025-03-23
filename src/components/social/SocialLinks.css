@@ -1,13 +1,18 @@
 /* SocialLinks.css */
 .social-links {
-    position: fixed;
-    top: 50%; /* Centra verticalmente */
-    left: 20px;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-    width: 10px;
-    height: 10px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  border-radius: 14px;
+  background: #b983ffbe;
+  width: 47px;
+  height: 181px;
   }
   
 
@@ -29,7 +34,7 @@
   }
   
   .social-links a:hover {
-    color: #B983FF; /* Cambia a un color cuando el usuario pase el ratón */
+    color: #000000; /* Cambia a un color cuando el usuario pase el ratón */
   }
   
   .social-links a:not(:last-child) {
