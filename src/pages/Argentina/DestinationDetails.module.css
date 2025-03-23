@@ -85,6 +85,7 @@
   /* Sección de imágenes (ahora abajo) */
   .carouselContainer {
     width: 100%;
+
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -92,7 +93,8 @@
   }
   
   .mainImage {
-    width: 100%;
+    width: 650px;
+    height: 400px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
@@ -104,8 +106,8 @@
   }
   
   .thumbnail {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
     cursor: pointer;
     opacity: 0.7;
@@ -118,8 +120,13 @@
   }
   
   @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      ;
+     
+    }
     .card {
-      width: 90%;
+      width: 100%;
       padding: 20px;
     }
   

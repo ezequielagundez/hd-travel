@@ -5,11 +5,12 @@
   flex-direction: column;
   align-items: center;
   top: 50%;
-  left: 20px;
   bottom: 20px;
+  left: 1px;
   right: 20px;
   z-index: 999;
   border-radius: 14px;
+  border: 2px solid black;
   background: #b983ffbe;
   width: 47px;
   height: 181px;

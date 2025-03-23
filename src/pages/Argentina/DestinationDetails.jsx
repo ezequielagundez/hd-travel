@@ -46,7 +46,7 @@ function DestinationDetails() {
           <div className={styles.infoItem}><strong>Disponibilidad:</strong> {destination.availability ? 'Disponible' : 'No disponible'}</div>
         </div>
 
-        <p className={styles.price}><FaDollarSign className={styles.icon} /> Precio: <span>${destination.price}</span></p>
+        <p className={styles.price}> Precio: <span>${destination.price}</span></p>
         <button className={styles.button}>Reservar ahora</button>
       </div>
     </div>
