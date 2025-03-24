@@ -5,23 +5,30 @@ import styles from "./Navbar.module.css";
 
 function Navbar() {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-
+  
   const handleMouseEnter = () => {
     setIsDropdownVisible(true);
   };
-
+  
   const handleMouseLeave = () => {
     setIsDropdownVisible(false);
   };
-
+  
   return (
     <nav className={styles.navbar}>
-      <img
-        height="70px"
-        width="70px"
-        src={logo}
-        alt="Logo"
-      />
+      <div className={styles.logoContainer}>
+        <Link to="/">
+          <img
+            height="50px"
+            width="50px"
+            src={logo}
+            alt="Logo"
+            className={styles.logo}
+          />
+          <span className={styles.brandName}>HD Viajes</span>
+        </Link>
+      </div>
+      
       <ul className={styles["nav-links"]}>
         <li className={styles.nav_li}>
           <Link to="/">Inicio</Link>
@@ -55,18 +62,16 @@ function Navbar() {
           )}
         </li>
         <li className={styles.nav_li}>
-          <Link to="/contact">Eventos</Link>
+          <Link to="/about">Nosotros</Link>
         </li>
         <li className={styles.nav_li}>
-          <Link to="/novedades">Novedades</Link>
-        </li>
-        <li className={styles.nav_li}>
-          <Link to="/contacto">Contacto</Link>
-        </li>
-        <li className={styles.nav_li}>
-          <Link to="/quienes-somos">¿Quiénes somos?</Link>
+          <Link to="/blog">Blog</Link>
         </li>
       </ul>
+      
+      <div className={styles.authButtons}>
+        <Link to="/signup" className={styles.signUp}>Contacto</Link>
+      </div>
     </nav>
   );
 }

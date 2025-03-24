@@ -1,21 +1,22 @@
 .formContainer {
     max-width: 800px;
     margin: 50px auto;
+    margin-top: 160px;
     padding: 20px;
-    background-color: #B983FF;
+    background-color: #6556DB;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   .title {
     text-align: center;
-    color: #333;
+    color: white;
   }
   
   .subtitle {
     text-align: center;
     font-size: 14px;
-    color: #555;
+    color: white
   }
   
   .formGroup {
@@ -41,16 +42,17 @@
   .button {
     width: 100%;
     padding: 10px;
-    background-color: #6A0DAD;
-    color: #fff;
+    background-color: #3822df;
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
   }
   
   .button:hover {
-    background-color: #555;
+    background-color: #5445c9;
   }
   
   .captcha {

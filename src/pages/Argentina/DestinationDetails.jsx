@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { GoogleSheetsData } from '../../components/GoogleSheets/GoogleSheetsData';
 import { FaMapMarkerAlt, FaClock, FaBus, FaDollarSign, FaGlobe } from 'react-icons/fa';
+import MetodosDePago from "../../components/MetodoDePago/PaymentMethods"
 import styles from './DestinationDetails.module.css';
 
 function DestinationDetails() {
@@ -16,6 +17,7 @@ function DestinationDetails() {
   if (!destination) return <h2 className={styles.error}>Destino no encontrado</h2>;
 
   return (
+    <div>
     <div className={styles.container}>
       {/* Sección de imagen destacada */}
       <div className={styles.carouselContainer}>
@@ -49,6 +51,9 @@ function DestinationDetails() {
         <p className={styles.price}> Precio: <span>${destination.price}</span></p>
         <button className={styles.button}>Reservar ahora</button>
       </div>
+      
+    </div>
+    <MetodosDePago />
     </div>
   );
 }

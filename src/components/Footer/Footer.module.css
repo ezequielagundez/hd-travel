@@ -1,14 +1,13 @@
 /* Footer General */
 .footer {
-    background-color: #B983FF;/* Color principal */
-    color: #fff; /* Texto en blanco */
+    background-color: #ffffff;    color: #fff; /* Texto en blanco */
     font-family: Arial, sans-serif;
     padding: 20px;
     text-align: center;
   }
   
   .footer a {
-    color: #fff;
+    color: #85849A;
     text-decoration: none;
     font-weight: bold;
   }
@@ -55,5 +54,4 @@
     margin-top: 10px;
     width: 100px;
   }
-  
   

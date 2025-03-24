@@ -1,44 +1,66 @@
 .navbar {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  background-color: #B983FF;
-  color: white;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  color: #85849A;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6556DB;
 }
 
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 2.5rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav_li {
   cursor: pointer;
-  font-size: 18px;
-  position: relative; /* Necesario para posicionar el menú desplegable */
+  font-size: 16px;
+  position: relative;
   transition: color 0.3s;
 }
 
-.nav_li a {
+.nav_li a, .nav_li span {
   text-decoration: none;
-  color: white;
+  color: #85849A;
+  font-weight: 600;
+  font-size: 18px;
 }
 
-.nav_li:hover {
-  color: #f0a500;
+.nav_li:hover a, .nav_li:hover span {
+  color: #6556DB;
 }
 
 /* Menú desplegable */
 .dropdown {
   position: absolute;
-  top: 100%; /* Debajo de la opción "Destinos" */
+  top: 100%;
   left: 0;
-  background-color: #333; /* Fondo del menú */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  border-radius: 8px;
   z-index: 10;
-  min-width: 150px; /* Asegurar ancho consistente */
+  min-width: 180px;
 }
 
 .dropdown ul {
@@ -48,15 +70,83 @@
 }
 
 .dropdown li {
-  padding: 8px 15px;
+  padding: 0.5rem 1rem;
 }
 
 .dropdown li a {
   text-decoration: none;
-  color: white;
-  font-size: 16px;
+  color: #4F4F67;
+  font-size: 14px;
+  display: block;
 }
 
 .dropdown li:hover {
-  background-color: #f0a500; /* Resalta el fondo al pasar el cursor */
+  background-color: #f5f5ff;
+}
+
+.dropdown li:hover a {
+  color: #6556DB;
+}
+
+.authButtons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.signIn {
+  text-decoration: none;
+  color: #4F4F67;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.signUp {
+  text-decoration: none;
+  background-color: #6556DB;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.signUp:hover {
+  background-color: #5445c9;
+}
+
+/* Menú hamburguesa solo en versión móvil */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #6556DB;
+  border-radius: 2px;
+}
+
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links, .authButtons {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu.open {
+    display: flex;
+  }
 }

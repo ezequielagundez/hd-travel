@@ -1,43 +1,88 @@
 /* SocialLinks.css */
+
+/* Contenedor de los iconos sociales */
 .social-links {
   position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   top: 50%;
-  bottom: 20px;
-  left: 1px;
-  right: 20px;
+  left: 10px;
   z-index: 999;
-  border-radius: 14px;
-  border: 2px solid black;
-  background: #b983ffbe;
-  width: 47px;
-  height: 181px;
-  }
-  
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-  .social-whatsapp{
-    position: fixed;
-    bottom: 20px; /* Distancia desde el borde inferior */
-    right: 40px; /* Distancia desde el borde derecho */
-    padding: 20px; /* Espaciado interno */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    width: 300px; /* Ancho del modal */
-  }
-  .social-links a {
-    display: block;
-    margin: 10px 0;
-    font-size: 24px;
-    width: 21px;
-    color: #fff;
-    transition: color 0.3s ease;
-  }
-  
-  .social-links a:hover {
-    color: #000000; /* Cambia a un color cuando el usuario pase el ratón */
-  }
-  
-  .social-links a:not(:last-child) {
-    margin-bottom: 15px; /* Espaciado entre íconos */
-  }
+/* Estilo de los iconos */
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  margin: 4px 0;
+  font-size: 18px;
+  color: #333;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efectos hover con colores personalizados */
+.social-links a[href*="wa.me"]:hover {
+  background: #25D366; /* Verde de WhatsApp */
+  color: white;
+  box-shadow: 0px 2px 8px rgba(37, 211, 102, 0.5);
+}
+
+.social-links a[href*="facebook.com"]:hover {
+  background: #1877F2; /* Azul de Facebook */
+  color: white;
+  box-shadow: 0px 2px 8px rgba(24, 119, 242, 0.5);
+}
+
+.social-links a[href*="instagram.com"]:hover {
+  background: #E1306C; /* Rosa de Instagram */
+  color: white;
+  box-shadow: 0px 2px 8px rgba(225, 48, 108, 0.5);
+}
+
+/* Efecto de hover general */
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+/* Modal flotante de WhatsApp */
+.social-whatsapp {
+  position: fixed;
+  bottom: 15px;
+  right: 30px;
+  z-index: 1000;
+}
+
+/* Estilos del modal */
+.modal-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen dentro del modal */
+.modal-content img {
+  width: 180px;
+  border-radius: 6px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.modal-content img:hover {
+  opacity: 1;
+}
+
+/* Animación del modal */
+.modal-container:hover {
+  transform: translateY(-2px);
+}

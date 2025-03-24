@@ -10,23 +10,37 @@ const ContactForm = () => {
     comentario: "",
   });
 
+  const [mensaje, setMensaje] = useState(""); // Para mostrar mensajes de éxito o error
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Formulario enviado:", formData);
-    // Aquí puedes integrar la lógica para enviar datos al backend
-  };
+
+    try {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbxtilCRJAeJM2Xn0ouaKVA_T69IbbCiy68L0ZweErD-_RJzvXr0Ln5rVc2CP2MfjT_9/exec", {
+            method: "POST",
+            mode: "no-cors", // 🔥 Esto evita el error de CORS
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        });
+
+        console.log("Formulario enviado con éxito");
+    } catch (error) {
+        console.error("Error al enviar formulario:", error);
+    }
+};
 
   return (
     <div className={styles.formContainer}>
-      <h2 className={styles.title}>Contactanos</h2>
+      <h2 className={styles.title}>Contáctanos</h2>
       <p className={styles.subtitle}>
-        Comunicate con nosotros y uno de nuestros vendedores se comunicará con
-        vos para darte asesoramiento
+        Comunícate con nosotros y uno de nuestros vendedores se pondrá en contacto para asesorarte.
       </p>
       <form onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
@@ -78,14 +92,13 @@ const ContactForm = () => {
           className={styles.textarea}
           required
         ></textarea>
-        <div className={styles.captcha}>
-          {/* Aquí podrías implementar reCAPTCHA */}
-          
-        </div>
+        
         <button type="submit" className={styles.button}>
           Enviar
         </button>
       </form>
+      
+      {mensaje && <p className={styles.mensaje}>{mensaje}</p>}
     </div>
   );
 };
