@@ -5,8 +5,8 @@ import DestinationsGrid from "../../components/ArgentinaPage/DestinationsGrid"
 function Brasil() {
     return(
         <div>
-            <HeroSection />
-            <DestinationsGrid />
+           <HeroSection lugar="Brasil"  descripcion="Componente funcionando"/>
+           <DestinationsGrid country="Brasil" />
         </div>
     )
 }

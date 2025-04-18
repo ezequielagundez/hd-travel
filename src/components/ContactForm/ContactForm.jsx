@@ -10,31 +10,30 @@ const ContactForm = () => {
     comentario: "",
   });
 
-  const [mensaje, setMensaje] = useState(""); // Para mostrar mensajes de éxito o error
+  const [mensaje, setMensaje] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-        const response = await fetch("https://script.google.com/macros/s/AKfycbxtilCRJAeJM2Xn0ouaKVA_T69IbbCiy68L0ZweErD-_RJzvXr0Ln5rVc2CP2MfjT_9/exec", {
-            method: "POST",
-            mode: "no-cors", // 🔥 Esto evita el error de CORS
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-        });
+    const mensajeTexto = `Hola! Mi nombre es ${formData.nombre} ${formData.apellido}. 
+Tel: ${formData.telefono} 
+Email: ${formData.email} 
+Comentario: ${formData.comentario}`;
 
-        console.log("Formulario enviado con éxito");
-    } catch (error) {
-        console.error("Error al enviar formulario:", error);
-    }
-};
+    const telefonoDestino = "5493512499855"; // Cambiá esto por tu número de WhatsApp sin + ni espacios
+    const url = `https://wa.me/${telefonoDestino}?text=${encodeURIComponent(mensajeTexto)}`;
+
+    window.open(url, "_blank");
+    setMensaje("Redireccionando a WhatsApp...");
+  };
 
   return (
     <div className={styles.formContainer}>
@@ -104,3 +103,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+

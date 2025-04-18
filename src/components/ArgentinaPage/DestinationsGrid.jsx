@@ -1,14 +1,19 @@
-// DestinationsGrid.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './DestinationsGrid.module.css'; // Importa el CSS Module
-import { GoogleSheetsData } from '../GoogleSheets/GoogleSheetsData'; // Importa el componente
+import styles from './DestinationsGrid.module.css';
+import { GoogleSheetsData } from '../GoogleSheets/GoogleSheetsData';
 
-function DestinationsGrid() {
-  const { destinations, loading, error } = GoogleSheetsData(); // Usamos el hook que devuelve los datos
+function DestinationsGrid({ country }) {
+  const { destinations, loading, error } = GoogleSheetsData(country);
 
-  if (loading) return <h2>Cargando destinos...</h2>;
+  if (loading) {
+    return (
+      <div className={styles.loaderContainer}>
+        <div className={styles.spinner}></div>
+        <p className={styles.loadingText}>Cargando destinos...</p>
+      </div>
+    );
+  }
   if (error) return <h2>{error}</h2>;
 
   return (
@@ -17,11 +22,12 @@ function DestinationsGrid() {
         <div key={destination.name} className={styles.cardDestinations}>
           <img src={destination.images[0]} alt={destination.name} style={{ width: '100%' }} />
           <h3 className={styles.titleCardDestinations}>{destination.name}</h3>
-          <Link to={`/argentina/${destination.name.toLowerCase()}`}>Ver más</Link>
-        </div>
+          <Link to={`/${country.toLowerCase()}/${destination.name.toLowerCase()}`}>Ver más</Link>
+          </div>
       ))}
     </div>
   );
 }
 
 export default DestinationsGrid;
+

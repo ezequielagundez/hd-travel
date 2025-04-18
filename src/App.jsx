@@ -8,7 +8,9 @@ import Argentina from "./pages/Argentina/Argentina";
 import SocialLinks from './components/social/SocialLinks';
 import Contacto from "./pages/Contacto/Contacto";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import DestinationDetails from "./pages/Argentina/DestinationDetails";
+import DestinationDetails from "./components/ArgentinaPage/DestinationDetails";
+import Brasil from "./pages/Brasil/Brasil";
+import Europa from "./pages/Europa/Europa";
 
 
 function App() {
@@ -19,8 +21,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/argentina" element={<Argentina />} />
-        <Route path="/argentina/:destinationId" element={<DestinationDetails />} />
-        <Route path="/contacto" element={<Contacto/>} />
+        <Route path="/brasil" element={<Brasil />}  />
+        <Route path="/europa" element={<Europa />}  />
+        <Route path="/:country/:destinationId" element={<DestinationDetails />} /> 
+        <Route path="/contacto" element={<Contacto />} />
       </Routes>
       
       
