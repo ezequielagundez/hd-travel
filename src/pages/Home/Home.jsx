@@ -5,6 +5,7 @@ import ContactForm from '../../components/ContactForm/ContactForm';
 import VisitaArgentina from "../../components/HomePage/VisitaArgentina";
 import VisitaBrasil from "../../components/HomePage/VisitaBrasil";
 import VisitaEuropa from "../../components/HomePage/VisitaEuropa";
+import logo from '../../assets/1.png';
 
 function Home() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -12,7 +13,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowWelcome(false);
-    }, 4000); // un poco más largo para disfrutar la animación
+    }, 1000); // un poco más largo para disfrutar la animación
   
     return () => clearTimeout(timer);
   }, []);
@@ -20,6 +21,7 @@ function Home() {
   if (showWelcome) {
     return (
       <div className={styles.welcomeContainer}>
+
         <h1 className={styles.welcomeText}>BIENVENIDO A HD VIAJES</h1>
       </div>
     );
