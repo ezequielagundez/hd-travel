@@ -1,62 +1,80 @@
 .formContainer {
-    max-width: 800px;
-    margin: 50px auto;
-    margin-top: 160px;
-    padding: 20px;
-    background-color: #6556DB;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .title {
-    text-align: center;
-    color: white;
-  }
-  
-  .subtitle {
-    text-align: center;
-    font-size: 14px;
-    color: white
-  }
-  
-  .formGroup {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  
-  .input,
-  .textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  .textarea {
-    resize: none;
-  }
-  
-  .button {
-    width: 100%;
-    padding: 10px;
-    background-color: #3822df;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .button:hover {
-    background-color: #5445c9;
-  }
-  
-  .captcha {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #f8f7fe;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #4f4f67;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #7a7a9a;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.row input {
+  flex: 1;
+  min-width: 200px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #dcdcec;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: white;
+  color: #333;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+button {
+  background-color: #6556db;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5445c9;
+}
+
+.mensaje {
+  margin-top: 20px;
+  color: #6556db;
+  text-align: center;
+}

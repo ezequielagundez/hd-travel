@@ -6,6 +6,7 @@
   background-color: #ffffff;
   color: #85849A;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
 .logoContainer {
@@ -14,7 +15,6 @@
 }
 
 .logo {
-  
   margin-right: 0.5rem;
 }
 
@@ -131,6 +131,7 @@
   border-radius: 2px;
 }
 
+/* Menú móvil desplegable */
 .mobileMenu {
   position: absolute;
   top: 70px;
@@ -166,4 +167,16 @@
   color: #6556DB;
   margin-bottom: 0.5rem;
   display: block;
+}
+
+/* Mostrar hamburguesa y ocultar links en pantallas chicas */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links,
+  .authButtons {
+    display: none;
+  }
 }

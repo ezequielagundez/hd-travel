@@ -42,12 +42,12 @@ function Home() {
       {/* Destinos Destacados */}
       <section className={styles.destinations}>
         <div className={styles.destination}>
-          <img src="https://img.static-af.com/transform/45cb9a13-b167-4842-8ea8-05d0cc7a4d04/" alt="París, Francia" />
+          <img src="https://images.unsplash.com/photo-1704835951668-f38c06b44834?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="París, Francia" />
           <h3>¿A DÓNDE IR?</h3>
           <p>Te ofrecemos un abanico completo de experiencias turísticas: desde los destinos más clásicos hasta opciones exclusivas y fuera de lo común. Vos elegís, nosotros lo hacemos posible.</p>
         </div>
         <div className={styles.destination}>
-          <img src="https://img.static-af.com/transform/45cb9a13-b167-4842-8ea8-05d0cc7a4d04/" alt="París, Francia" />
+          <img src="https://images.unsplash.com/photo-1465188035480-cf3a60801ea5?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="París, Francia" />
           <h3>CALIDAD</h3>
           <p>Nos enfocamos en cada detalle para que tu viaje sea único. Te acompañamos antes, durante y después de cada aventura, asegurando una experiencia memorable.</p>
         </div>

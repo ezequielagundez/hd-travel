@@ -3,10 +3,10 @@ import styles from "./VisitaBrasil.module.css";
 import { Link } from "react-router-dom";
 
 const destinos = [
-  { src: "https://media.urgente24.com/p/ed128c19791c8aafd3d47d9a3f0ad3e2/adjuntos/319/imagenes/002/937/0002937944/brasiljpg.jpg", alt: "Río de Janeiro" },
-  { src: "https://media.urgente24.com/p/ed128c19791c8aafd3d47d9a3f0ad3e2/adjuntos/319/imagenes/002/937/0002937944/brasiljpg.jpg", alt: "Salvador de Bahía" },
-  { src: "https://media.urgente24.com/p/ed128c19791c8aafd3d47d9a3f0ad3e2/adjuntos/319/imagenes/002/937/0002937944/brasiljpg.jpg", alt: "Amazonas" },
-  { src: "https://media.urgente24.com/p/ed128c19791c8aafd3d47d9a3f0ad3e2/adjuntos/319/imagenes/002/937/0002937944/brasiljpg.jpg", alt: "Pantanal" },
+  { src: "https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Río de Janeiro" },
+  { src: "https://images.unsplash.com/photo-1544991337-95176b5233c4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Salvador de Bahía" },
+  { src: "https://images.unsplash.com/photo-1515700281303-5a0a73d9c584?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Amazonas" },
+  { src: "https://images.unsplash.com/photo-1593854586136-2edae149504c?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Pantanal" },
 
 ];
 

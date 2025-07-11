@@ -40,9 +40,9 @@
 
 .destination {
   text-align: center;
-  max-width: 350px;
+  max-width: 300px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  padding: 20px;
+  padding: 10px;
   border-radius: 20px;
 }
 
@@ -53,7 +53,7 @@
 
 .destination img {
   width: 100%;
-  height: 300px;
+  height: 250px;
   border-radius: 20px;
   object-fit: cover;
 }
@@ -65,7 +65,7 @@
 }
 
 .destination p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #555;
 }
 

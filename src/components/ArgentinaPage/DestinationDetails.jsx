@@ -10,7 +10,14 @@ function DestinationDetails() {
   const { destinations, loading, error } = GoogleSheetsData(country); // Llama a Google Sheets con el país dinámico
   const [selectedImage, setSelectedImage] = useState(0);
 
-  if (loading) return <h2 className={styles.loading}>Cargando...</h2>;
+    if (loading) {
+      return (
+        <div className={styles.loaderContainer}>
+          <div className={styles.spinner}></div>
+          <p className={styles.loadingText}>Cargando destino...</p>
+        </div>
+      );
+    }
   if (error) return <h2 className={styles.error}>{error}</h2>;
 
   // Busca el destino seleccionado en los datos obtenidos
