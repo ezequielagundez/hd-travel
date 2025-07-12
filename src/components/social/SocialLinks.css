@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   top: 50%;
-  left: 10px;
+  left: 2px;
   z-index: 999;
   padding: 6px;
   border-radius: 8px;
@@ -70,7 +70,7 @@
 
 /* Imagen dentro del modal */
 .modal-content img {
-  width: 180px;
+  width: 80px;
   border-radius: 6px;
   opacity: 0.9;
   transition: opacity 0.3s ease;
@@ -83,4 +83,12 @@
 /* Animación del modal */
 .modal-container:hover {
   transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+  .modal-container {
+  display: none;
+
+}
 }

@@ -58,9 +58,7 @@ function Navbar() {
         <li className={styles.nav_li}>
           <Link to="/about">Nosotros</Link>
         </li>
-        <li className={styles.nav_li}>
-          <Link to="/blog">Blog</Link>
-        </li>
+
       </ul>
 
       <div className={styles.authButtons}>
@@ -90,7 +88,6 @@ function Navbar() {
               </ul>
             </li>
             <li><Link to="/about" onClick={closeMobileMenu}>Nosotros</Link></li>
-            <li><Link to="/blog" onClick={closeMobileMenu}>Blog</Link></li>
           </ul>
           <Link to="/signup" className={styles.signUp} onClick={closeMobileMenu}>Contacto</Link>
         </div>

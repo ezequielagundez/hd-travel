@@ -19,7 +19,7 @@ const SocialLinks = () => {
       <div className="social-whatsapp">
         <div className="modal-container">
           <div className="modal-content">
-            <img src="https://www.diagnosweb.com/wp-content/uploads/2021/02/whatsapp.png" alt="WhatsApp" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png" alt="WhatsApp" />
           </div>
         </div>
       </div>

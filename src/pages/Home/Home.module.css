@@ -1,101 +1,91 @@
-/* ===== Hero Section ===== */
+/* ===== Hero dinámico ===== */
 .hero {
   position: relative;
-  background-color: #E9E7FC;
-  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 10px;
+  transition: background-image 1s ease-in-out;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
 
 .heroContainer {
+  position: relative;
+  z-index: 2;
   max-width: 900px;
-  margin: 0 auto;
+  padding: 20px;
+  color: white;
 }
 
 .heroTitle {
-  font-size: 4rem;
-  color: #333;
-  font-weight: bold;
+  font-size: 3.6rem;
+  font-weight: 800;
   margin-bottom: 20px;
+  animation: fadeInUp 1s ease;
 }
 
 .heroText {
-  font-size: 1.6rem;
-  max-width: 800px;
-  margin: 0 auto 30px;
-  line-height: 1.8;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  animation: fadeInUp 1.2s ease;
+  color: #c8c6e4;
 }
 
 /* ===== Destinos Destacados ===== */
 .destinations {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  padding: 30px 30px;
+  gap: 50px;
+  padding: 60px 30px;
   flex-wrap: wrap;
+  background: #fff;
 }
 
 .destination {
-  text-align: center;
+  background: #F9F9FF;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  padding: 20px;
   max-width: 300px;
+  text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  padding: 10px;
-  border-radius: 20px;
 }
 
 .destination:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .destination img {
   width: 100%;
-  height: 250px;
-  border-radius: 20px;
+  height: 230px;
   object-fit: cover;
+  border-radius: 14px;
 }
 
 .destination h3 {
-  font-size: 2rem;
-  margin: 20px 0;
-  color: #4F4F67;
+  font-size: 1.6rem;
+  color: #3B2F91;
+  margin: 15px 0 10px;
+  font-weight: 700;
 }
 
 .destination p {
   font-size: 1rem;
   color: #555;
+  line-height: 1.5;
 }
 
-
-/* ===== Responsivo para dispositivos móviles ===== */
-@media (max-width: 768px) {
-  .heroTitle {
-    font-size: 3rem;
-  }
-
-  .heroText {
-    font-size: 1.2rem;
-  }
-
-  .destinations {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .destination {
-    max-width: 100%;
-  }
-
-  .specialOffer {
-    padding: 15px;
-  }
-}
-
-
-/* ===== Bienvenida Animada ===== */
+/* ===== Bienvenida ===== */
 .welcomeContainer {
   position: fixed;
   top: 0;
@@ -107,7 +97,7 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  animation: fadeOut 1s ease-in-out 3s forwards; /* Desaparece luego de 3s */
+  animation: fadeOut 1s ease-in-out 3s forwards;
 }
 
 .welcomeText {
@@ -118,11 +108,22 @@
   text-align: center;
 }
 
-/* Animaciones */
+/* ===== Animaciones ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
@@ -131,14 +132,31 @@
 }
 
 @keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  90% {
+  0%, 90% {
     opacity: 1;
   }
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.4rem;
+  }
+
+  .heroText {
+    font-size: 1.1rem;
+  }
+
+  .destinations {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .destination {
+    max-width: 90%;
   }
 }
